@@ -21,7 +21,6 @@ router.get('/subscribe', async (ctx, next) => {
 
 router.post('/publish', async (ctx, next) => {
   const message = ctx.request.body.message;
-  console.log(`publish '${message}'`);
   if (message) {
     users.forEach((res) => {
       res.statusCode = 200;
